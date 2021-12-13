@@ -13,7 +13,7 @@ use JetBrains\PhpStorm\Pure;
 
 class IssVendas implements IssVendasFactory
 {
-        public PendingRequest $request;
+    public PendingRequest $request;
 
     private ?string $token;
 
@@ -51,7 +51,7 @@ class IssVendas implements IssVendasFactory
 
     private function getToken()
     {
-        $hubUrl = Config::get('hub.base_uri') . Config::get('hub.oauth.token_uri');
+        $hubUrl = Config::get('hub.base_uri').Config::get('hub.oauth.token_uri');
         $clientId = Config::get('hub.programatic_access.client_id');
         $secretId = Config::get('hub.programatic_access.client_secret');
         $response = Http::asForm()->post($hubUrl, [
@@ -85,8 +85,16 @@ class IssVendas implements IssVendasFactory
     /**
      * @return Sale
      */
-    #[Pure] public function sale(): Sale
+    public function sale(): Sale
     {
         return new Sale($this);
+    }
+
+    /**
+     * @return Programmatic
+     */
+    public function programmatic(): Programmatic
+    {
+        return new Programmatic($this);
     }
 }

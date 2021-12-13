@@ -9,16 +9,16 @@ use Illuminate\Http\Client\RequestException;
 class Sale implements SaleContract
 {
     /**
-     * @var IssVendas
+     * @var Programmatic
      */
-    private IssVendas $vendas;
+    private Programmatic $programmatic;
 
     /**
-     * @param  IssVendas  $vendas
+     * @param  Programmatic  $vendas
      */
-    public function __construct(IssVendas $vendas)
+    public function __construct(Programmatic $vendas)
     {
-        $this->vendas = $vendas;
+        $this->programmatic = $vendas;
     }
 
     /**
@@ -30,6 +30,6 @@ class Sale implements SaleContract
      */
     public function find(string $uuid): object
     {
-        return $this->vendas->request->get(vsprintf(self::ENDPOINT_FIND_BY_UUID, [$uuid]))->throw()->object();
+        return $this->programmatic->vendas->request->get(vsprintf(self::ENDPOINT_FIND_BY_UUID, [$uuid]))->throw()->object();
     }
 }
