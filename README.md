@@ -30,6 +30,7 @@ return [
 
 ```php
 use Bildvitta\IssVendas\IssVendas;
+use Illuminate\Http\Client\RequestException;
 
 try {
     $vendas = new IssVendas();
