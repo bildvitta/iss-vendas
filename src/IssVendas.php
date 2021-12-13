@@ -18,8 +18,6 @@ class IssVendas implements IssVendasFactory
 
     public function __construct(?string $token = '')
     {
-        parent::__construct();
-
         $programmatic = true;
         if ($token != '') {
             $programmatic = false;
