@@ -17,6 +17,6 @@ class IssVendasServiceProvider extends PackageServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
-        $package->name('iss-vendas')->hasConfigFile();
+        $package->name('vendas')->hasConfigFile();
     }
 }

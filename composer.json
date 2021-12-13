@@ -4,7 +4,8 @@
     "keywords": [
         "bildvitta",
         "laravel",
-        "iss-vendas"
+        "iss-vendas",
+        "vendas"
     ],
     "homepage": "https://github.com/bildvitta/iss-vendas",
     "license": "MIT",
@@ -57,7 +58,7 @@
                 "Bildvitta\\IssVendas\\IssVendasServiceProvider"
             ],
             "aliases": {
-                "IssVendas": "Bildvitta\\IssVendas\\Facades\\IssVendas"
+                "vendas": "Bildvitta\\IssVendas\\Facades\\IssVendas"
             }
         }
     },
