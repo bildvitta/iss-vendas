@@ -1,5 +1,5 @@
 <?php
-// config for iss-vendas/IssVendas
+// config for Bildvitta/IssVendas
 return [
 
 ];

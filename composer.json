@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "iss-vendas\\IssVendas\\": "src",
-            "iss-vendas\\IssVendas\\Database\\Factories\\": "database/factories"
+            "Bildvitta\\IssVendas\\": "src",
+            "Bildvitta\\IssVendas\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "iss-vendas\\IssVendas\\Tests\\": "tests"
+            "Bildvitta\\IssVendas\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "iss-vendas\\IssVendas\\IssVendasServiceProvider"
+                "Bildvitta\\IssVendas\\IssVendasServiceProvider"
             ],
             "aliases": {
-                "IssVendas": "iss-vendas\\IssVendas\\Facades\\IssVendas"
+                "IssVendas": "Bildvitta\\IssVendas\\Facades\\IssVendas"
             }
         }
     },

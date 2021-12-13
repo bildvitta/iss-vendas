@@ -1,10 +1,10 @@
 <?php
 
-namespace iss-vendas\IssVendas\Tests;
+namespace Bildvitta\IssVendas\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use iss-vendas\IssVendas\IssVendasServiceProvider;
+use Bildvitta\IssVendas\IssVendasServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'iss-vendas\\IssVendas\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Bildvitta\\IssVendas\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace iss-vendas\IssVendas;
+namespace Bildvitta\IssVendas;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use iss-vendas\IssVendas\Commands\IssVendasCommand;
+use Bildvitta\IssVendas\Commands\IssVendasCommand;
 
 class IssVendasServiceProvider extends PackageServiceProvider
 {
