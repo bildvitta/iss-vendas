@@ -3,7 +3,6 @@
 namespace Bildvitta\IssVendas\Resources\Programmatic;
 
 use Bildvitta\IssVendas\Contracts\Resources\Programmatic\SaleContract;
-use Bildvitta\IssVendas\IssVendas;
 use Illuminate\Http\Client\RequestException;
 
 class Sale implements SaleContract
