@@ -3,13 +3,12 @@
 namespace Bildvitta\IssVendas;
 
 use Bildvitta\IssVendas\Contracts\IssVendasFactory;
+use Bildvitta\IssVendas\Resources\Programmatic\Programmatic;
 use Bildvitta\IssVendas\Resources\Sale;
-use Illuminate\Http\Client\Factory as HttpClient;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
-use JetBrains\PhpStorm\Pure;
 
 class IssVendas implements IssVendasFactory
 {

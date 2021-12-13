@@ -2,9 +2,9 @@
 
 namespace Bildvitta\IssVendas\Tests;
 
+use Bildvitta\IssVendas\IssVendasServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Bildvitta\IssVendas\IssVendasServiceProvider;
 
 class TestCase extends Orchestra
 {

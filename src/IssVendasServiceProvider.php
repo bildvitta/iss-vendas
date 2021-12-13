@@ -4,7 +4,6 @@ namespace Bildvitta\IssVendas;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Bildvitta\IssVendas\Commands\IssVendasCommand;
 
 class IssVendasServiceProvider extends PackageServiceProvider
 {
