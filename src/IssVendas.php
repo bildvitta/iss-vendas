@@ -64,7 +64,7 @@ class IssVendas implements IssVendasFactory
     private function prepareRequest(): PendingRequest
     {
         return $this->request = Http::withToken($this->token)
-            ->baseUrl(Config::get('iss-juridico.base_uri').Config::get('iss-juridico.prefix'))
+            ->baseUrl(Config::get('iss-vendas.base_uri').Config::get('iss-vendas.prefix'))
             ->withOptions(self::DEFAULT_OPTIONS)
             ->withHeaders($this->getHeaders());
     }

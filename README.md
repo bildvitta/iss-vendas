@@ -29,8 +29,13 @@ return [
 ## Usage
 
 ```php
-$vendas = new Bildvitta\IssVendas\IsseVendas();
-dd($vendas->programmatic()->sale()->find('95c17b9b-a839-4bc7-89c0-6d23c54641a1'));
+use Bildvitta\IssVendas\IssVendas;
+
+try {
+    $vendas = new IssVendas();
+    $sale = $vendas->programmatic()->sale()->find('95c17b9b-a839-4bc7-89c0-6d23c54641a1');
+} catch (RequestException $e) {
+}
 ```
 
 ## Changelog
