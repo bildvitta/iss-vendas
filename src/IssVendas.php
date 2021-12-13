@@ -2,15 +2,16 @@
 
 namespace Bildvitta\IssVendas;
 
-use Bildvitta\IssJuridico\Contracts\IssJuridicoFactory;
-use Bildvitta\IssJuridico\Resources\Contracts;
+use Bildvitta\IssVendas\Contracts\IssVendasFactory;
+use Bildvitta\IssVendas\Resources\Sale;
 use Illuminate\Http\Client\Factory as HttpClient;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
+use JetBrains\PhpStorm\Pure;
 
-class IssVendas
+class IssVendas implements IssVendasFactory
 {
         public PendingRequest $request;
 
@@ -81,8 +82,11 @@ class IssVendas
         );
     }
 
-    public function contracts(): Contracts
+    /**
+     * @return Sale
+     */
+    #[Pure] public function sale(): Sale
     {
-        return new Contracts($this);
+        return new Sale($this);
     }
 }

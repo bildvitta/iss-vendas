@@ -8,6 +8,9 @@ use Bildvitta\IssVendas\Commands\IssVendasCommand;
 
 class IssVendasServiceProvider extends PackageServiceProvider
 {
+    /**
+     * @param  Package  $package
+     */
     public function configurePackage(Package $package): void
     {
         /*
@@ -15,11 +18,6 @@ class IssVendasServiceProvider extends PackageServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
-        $package
-            ->name('iss-vendas')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_iss-vendas_table')
-            ->hasCommand(IssVendasCommand::class);
+        $package->name('iss-vendas')->hasConfigFile();
     }
 }
