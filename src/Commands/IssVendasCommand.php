@@ -1,6 +1,6 @@
 <?php
 
-namespace iss-vendas\IssVendas\Commands;
+namespace Bildvitta\IssVendas\Commands;
 
 use Illuminate\Console\Command;
 

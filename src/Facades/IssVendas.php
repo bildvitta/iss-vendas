@@ -1,11 +1,11 @@
 <?php
 
-namespace iss-vendas\IssVendas\Facades;
+namespace Bildvitta\IssVendas\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \iss-vendas\IssVendas\IssVendas
+ * @see \Bildvitta\IssVendas\IssVendas
  */
 class IssVendas extends Facade
 {

@@ -1,19 +1,8 @@
 # This is my package iss-vendas
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/bildvitta/iss-vendas.svg?style=flat-square)](https://packagist.org/packages/bildvitta/iss-vendas)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/bildvitta/iss-vendas/run-tests?label=tests)](https://github.com/bildvitta/iss-vendas/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/bildvitta/iss-vendas/Check%20&%20fix%20styling?label=code%20style)](https://github.com/bildvitta/iss-vendas/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/bildvitta/iss-vendas.svg?style=flat-square)](https://packagist.org/packages/bildvitta/iss-vendas)
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/iss-vendas.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/iss-vendas)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -23,42 +12,31 @@ You can install the package via composer:
 composer require bildvitta/iss-vendas
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="iss-vendas_without_prefix-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --tag="iss-vendas_without_prefix-config"
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="example-views"
+php artisan vendor:publish --tag="vendas-config"
 ```
 
 This is the contents of the published config file:
 
 ```php
 return [
+    'base_uri' => env('MS_VENDAS_BASE_URI', 'https://api-dev-vendas.nave.dev'),
+    'prefix' => env('MS_VENDAS_API_PREFIX', '/api')
 ];
 ```
 
 ## Usage
 
 ```php
-$iss-vendas = new iss-vendas\IssVendas();
-echo $iss-vendas->echoPhrase('Hello, iss-vendas!');
-```
+use Bildvitta\IssVendas\IssVendas;
+use Illuminate\Http\Client\RequestException;
 
-## Testing
-
-```bash
-composer test
+try {
+    $vendas = new IssVendas();
+    $sale = $vendas->programmatic()->sale()->find('95c17b9b-a839-4bc7-89c0-6d23c54641a1');
+} catch (RequestException $e) {
+}
 ```
 
 ## Changelog

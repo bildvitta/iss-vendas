@@ -1,6 +1,6 @@
 <?php
 
-namespace iss-vendas\IssVendas\Database\Factories;
+namespace Bildvitta\IssVendas\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
