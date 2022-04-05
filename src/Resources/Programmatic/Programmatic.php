@@ -12,7 +12,7 @@ class Programmatic
     public IssVendas $vendas;
 
     /**
-     * @param  IssVendas  $vendas
+     * @param IssVendas $vendas
      */
     public function __construct(IssVendas $vendas)
     {
@@ -25,5 +25,10 @@ class Programmatic
     public function sale(): Sale
     {
         return new Sale($this);
+    }
+
+    public function realEstateDevelopment(): RealEstateDevelopment
+    {
+        return new RealEstateDevelopment($this);
     }
 }
