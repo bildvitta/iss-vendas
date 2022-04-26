@@ -19,6 +19,25 @@ class RealEstateDevelopment implements RealEstateDevelopmentContract
         $this->programmatic = $vendas;
     }
 
+    /**
+     * @param  array  $query
+     * @param  array  $body
+     *
+     * @return object
+     */
+    public function search(array $query = [], array $body = []): object
+    {
+        $url = self::ENDPOINT_PREFIX;
+
+        $request = $this->programmatic->vendas->request;
+
+        if ($body) {
+            $request->withBody(json_encode($body), 'application/json');
+        }
+
+        return $request->get($url, $query)->throw()->object();
+    }
+
     public function units()
     {
         return new Unit($this->programmatic);
