@@ -27,6 +27,9 @@ class Programmatic
         return new Sale($this);
     }
 
+    /**
+     * @return RealEstateDevelopment
+     */
     public function realEstateDevelopment(): RealEstateDevelopment
     {
         return new RealEstateDevelopment($this);
