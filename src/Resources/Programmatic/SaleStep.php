@@ -33,6 +33,6 @@ class SaleStep implements SaleStepContract
 
     public function find(string $uuid): object
     {
-        // TODO: Implement find() method.
+        return $this->sale->programmatic->vendas->request->get(vsprintf(self::ENDPOINT_FIND_BY_UUID, [$uuid]))->throw()->object();
     }
 }
