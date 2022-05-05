@@ -10,18 +10,26 @@ class Sale implements SaleContract
     /**
      * @var Programmatic
      */
-    private Programmatic $programmatic;
+    public Programmatic $programmatic;
 
     /**
-     * @param  Programmatic  $vendas
+     * @param Programmatic $programmatic
      */
-    public function __construct(Programmatic $vendas)
+    public function __construct(Programmatic $programmatic)
     {
-        $this->programmatic = $vendas;
+        $this->programmatic = $programmatic;
     }
 
     /**
-     * @param  string  $uuid
+     * @return SaleStep
+     */
+    public function steps()
+    {
+        return new SaleStep($this);
+    }
+
+    /**
+     * @param string $uuid
      *
      * @return object
      *
