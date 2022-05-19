@@ -15,6 +15,11 @@ interface SaleContract
     public const ENDPOINT_FIND_BY_UUID = self::ENDPOINT_PREFIX.'/%s';
 
     /**
+     * @const string
+     */
+    public const ENDPOINT_INTEGRATIONS = self::ENDPOINT_PREFIX.'/integrations';
+
+    /**
      * @param  string  $uuid
      *
      * @return object

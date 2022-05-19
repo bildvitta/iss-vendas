@@ -39,4 +39,14 @@ class Sale implements SaleContract
     {
         return $this->programmatic->vendas->request->get(vsprintf(self::ENDPOINT_FIND_BY_UUID, [$uuid]))->throw()->object();
     }
+
+    /**
+     * @param array $query
+     *
+     * @return object
+     */
+    public function integrations(array $query = []): object
+    {
+        return $this->programmatic->vendas->request->get(self::ENDPOINT_INTEGRATIONS, $query)->throw()->object();
+    }
 }
