@@ -38,7 +38,7 @@ class IssVendas implements IssVendasFactory
                 $accessToken = $this->getToken();
                 Cache::add($clientId, $accessToken, now()->addSeconds(31536000));
             }
-            $this->token = $accessToken;
+            $this->token = $accessToken['access_token'];
         }
 
         $this->prepareRequest();
