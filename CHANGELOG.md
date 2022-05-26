@@ -2,6 +2,16 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## Add Laravel 7 support - 2022-05-26
+
+## What's Changed
+
+- Add sales integrations endpoint by @paulodavanco in https://github.com/bildvitta/iss-vendas/pull/15
+- Add Laravel 7 support by @paulodavanco in https://github.com/bildvitta/iss-vendas/pull/16
+- Develop by @paulodavanco in https://github.com/bildvitta/iss-vendas/pull/17
+
+**Full Changelog**: https://github.com/bildvitta/iss-vendas/compare/v0.0.5...v0.0.6
+
 ## Add Real Estate Development search option - 2022-04-27
 
 ## What's Changed
