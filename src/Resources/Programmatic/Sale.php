@@ -29,6 +29,14 @@ class Sale implements SaleContract
     }
 
     /**
+     * @return SaleFact
+     */
+    public function facts()
+    {
+        return new SaleFact($this);
+    }
+
+    /**
      * @param string $uuid
      *
      * @return object
