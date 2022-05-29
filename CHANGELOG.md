@@ -2,6 +2,10 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## V0.0.8 - 2022-05-29
+
+Sale Facts Support Implementation
+
 ## Add Laravel 7 support - 2022-05-26
 
 ## What's Changed
