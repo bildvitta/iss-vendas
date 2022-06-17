@@ -2,7 +2,6 @@
 
 namespace Bildvitta\IssVendas\Resources\Programmatic;
 
-
 use Bildvitta\IssVendas\Contracts\Resources\Programmatic\CustomerContract;
 
 class Customer implements CustomerContract
