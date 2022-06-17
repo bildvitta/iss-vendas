@@ -34,4 +34,12 @@ class Programmatic
     {
         return new RealEstateDevelopment($this);
     }
+
+    /**
+     * @return Customer
+     */
+    public function customers(): Customer
+    {
+        return new Customer($this);
+    }
 }

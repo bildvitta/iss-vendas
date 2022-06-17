@@ -2,6 +2,30 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## V0.0.8 - 2022-05-29
+
+Sale Facts Support Implementation
+
+## Add Laravel 7 support - 2022-05-26
+
+## What's Changed
+
+- Add sales integrations endpoint by @paulodavanco in https://github.com/bildvitta/iss-vendas/pull/15
+- Add Laravel 7 support by @paulodavanco in https://github.com/bildvitta/iss-vendas/pull/16
+- Develop by @paulodavanco in https://github.com/bildvitta/iss-vendas/pull/17
+
+**Full Changelog**: https://github.com/bildvitta/iss-vendas/compare/v0.0.5...v0.0.6
+
+## Add Real Estate Development search option - 2022-04-27
+
+## What's Changed
+
+- Bump dependabot/fetch-metadata from 1.3.0 to 1.3.1 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/10
+- Real estate development programmatic search by @paulodavanco in https://github.com/bildvitta/iss-vendas/pull/11
+- Develop by @paulodavanco in https://github.com/bildvitta/iss-vendas/pull/12
+
+**Full Changelog**: https://github.com/bildvitta/iss-vendas/compare/v0.0.3...v0.0.4
+
 ## v0.0.2 - 2022-01-20
 
 ## What's Changed
