@@ -2,6 +2,19 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## Added importing a customer to sales - 2022-06-17
+
+### What's Changed
+
+- Feature/import customer by @noemimpimentel in https://github.com/bildvitta/iss-vendas/pull/21
+- Merging develop into main by @noemimpimentel in https://github.com/bildvitta/iss-vendas/pull/22
+
+### New Contributors
+
+- @noemimpimentel made their first contribution in https://github.com/bildvitta/iss-vendas/pull/21
+
+**Full Changelog**: https://github.com/bildvitta/iss-vendas/compare/V0.0.8...v0.0.9
+
 ## V0.0.8 - 2022-05-29
 
 Sale Facts Support Implementation
