@@ -57,4 +57,15 @@ class Sale implements SaleContract
     {
         return $this->programmatic->vendas->request->get(self::ENDPOINT_INTEGRATIONS, $query)->throw()->object();
     }
+
+    /**
+     * @param  string  $uuid
+     * @param array $data
+     *
+     * @return object
+     */
+    public function update(string $uuid, array $data): object
+    {
+        return $this->programmatic->vendas->request->patch(vsprintf(self::ENDPOINT_UPDATE, [$uuid]), $data)->throw()->object();
+    }
 }

@@ -20,9 +20,22 @@ interface SaleContract
     public const ENDPOINT_INTEGRATIONS = self::ENDPOINT_PREFIX.'/integrations';
 
     /**
+     * @const string
+     */
+    public const ENDPOINT_UPDATE = self::ENDPOINT_PREFIX.'/%s';
+
+    /**
      * @param  string  $uuid
      *
      * @return object
      */
     public function find(string $uuid): object;
+
+    /**
+     * @param  string  $uuid
+     * @param array $data
+     *
+     * @return object
+     */
+    public function update(string $uuid, array $data): object;
 }
