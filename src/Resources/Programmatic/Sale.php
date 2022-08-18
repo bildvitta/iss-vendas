@@ -37,6 +37,14 @@ class Sale implements SaleContract
     }
 
     /**
+     * @return SalePersonalization
+     */
+    public function personalizations()
+    {
+        return new SalePersonalization($this);
+    }
+
+    /**
      * @param string $uuid
      *
      * @return object
