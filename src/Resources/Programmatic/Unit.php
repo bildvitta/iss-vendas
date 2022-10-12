@@ -28,4 +28,12 @@ class Unit implements UnitContract
             vsprintf(self::ENDPOINT_FIND_BY_UUID, [$refRealEstateDevelopment, $refUnit])
         )->throw()->object();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function update(string $refRealEstateDevelopment, string $refUnit, array $data): object
+    {
+        return $this->programmatic->vendas->request->patch(vsprintf(self::ENDPOINT_UPDATE, [$refRealEstateDevelopment, $refUnit]), $data)->throw()->object();
+    }
 }
