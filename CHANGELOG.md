@@ -2,6 +2,10 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## v0.0.12 - 2022-10-12
+
+Programmatic unit update
+
 ## v0.0.10 - 2022-06-28
 
 Programmatic users can now update sales
