@@ -7,17 +7,12 @@ interface UnitContract
     /**
      * @const string
      */
-    public const ENDPOINT_PREFIX = '/programmatic/products/%s/unities';
+    public const ENDPOINT_FIND = '/programmatic/units/%s';
 
     /**
      * @const string
      */
-    public const ENDPOINT_FIND_BY_UUID = self::ENDPOINT_PREFIX . '/%s';
-
-    /**
-     * @const string
-     */
-    public const ENDPOINT_UPDATE= self::ENDPOINT_PREFIX . '/%s';
+    public const ENDPOINT_UPDATE = '/programmatic/units/%s';
 
     /**
      * @param string $refRealEstateDevelopment
@@ -25,7 +20,7 @@ interface UnitContract
      *
      * @return object
      */
-    public function find(string $refRealEstateDevelopment, string $refUnit): object;
+    public function find(string $uuid): object;
 
     /**
      * @param string $refRealEstateDevelopment
@@ -34,5 +29,5 @@ interface UnitContract
      *
      * @return object
      */
-    public function update(string $refRealEstateDevelopment, string $refUnit, array $data): object;
+    public function update(string $uuid, array $data): object;
 }

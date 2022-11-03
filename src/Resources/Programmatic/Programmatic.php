@@ -35,6 +35,11 @@ class Programmatic
         return new RealEstateDevelopment($this);
     }
 
+    public function units()
+    {
+        return new Unit($this->programmatic);
+    }
+
     /**
      * @return Customer
      */
