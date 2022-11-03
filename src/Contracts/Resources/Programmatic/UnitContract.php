@@ -15,16 +15,14 @@ interface UnitContract
     public const ENDPOINT_UPDATE = '/programmatic/units/%s';
 
     /**
-     * @param string $refRealEstateDevelopment
-     * @param string $refUnit
+     * @param string $uuid
      *
      * @return object
      */
     public function find(string $uuid): object;
 
     /**
-     * @param string $refRealEstateDevelopment
-     * @param string $refUnit
+     * @param string $uuid
      * @param array $data
      *
      * @return object
