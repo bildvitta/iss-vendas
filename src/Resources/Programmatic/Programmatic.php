@@ -37,7 +37,7 @@ class Programmatic
 
     public function units()
     {
-        return new Unit($this->programmatic);
+        return new Unit($this);
     }
 
     /**
