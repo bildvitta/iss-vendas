@@ -12,7 +12,7 @@ class Unit implements UnitContract
     private Programmatic $programmatic;
 
     /**
-     * @param Programmatic $vendas
+     * @param Programmatic $programmatic
      */
     public function __construct(Programmatic $programmatic)
     {
