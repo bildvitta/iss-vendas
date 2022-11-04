@@ -2,6 +2,10 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## v0.0.13 - 2022-11-04
+
+Programmatic Units refactor
+
 ## v0.0.12 - 2022-10-12
 
 Programmatic unit update
