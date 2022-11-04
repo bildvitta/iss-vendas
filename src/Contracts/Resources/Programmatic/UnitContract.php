@@ -7,12 +7,12 @@ interface UnitContract
     /**
      * @const string
      */
-    public const ENDPOINT_FIND = '/programmatic/units/%s';
+    public const ENDPOINT_FIND = '/programmatic/produto/units/%s';
 
     /**
      * @const string
      */
-    public const ENDPOINT_UPDATE = '/programmatic/units/%s';
+    public const ENDPOINT_UPDATE = '/programmatic/produto/units/%s';
 
     /**
      * @param string $uuid
