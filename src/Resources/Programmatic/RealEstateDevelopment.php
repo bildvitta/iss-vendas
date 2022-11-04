@@ -37,9 +37,4 @@ class RealEstateDevelopment implements RealEstateDevelopmentContract
 
         return $request->get($url, $query)->throw()->object();
     }
-
-    public function units()
-    {
-        return new Unit($this->programmatic);
-    }
 }

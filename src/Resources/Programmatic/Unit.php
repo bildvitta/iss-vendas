@@ -12,20 +12,31 @@ class Unit implements UnitContract
     private Programmatic $programmatic;
 
     /**
-     * @param Programmatic $vendas
+     * @param Programmatic $programmatic
      */
-    public function __construct(Programmatic $vendas)
+    public function __construct(Programmatic $programmatic)
     {
-        $this->programmatic = $vendas;
+        $this->programmatic = $programmatic;
     }
 
     /**
      * @inheritDoc
      */
-    public function find(string $refRealEstateDevelopment, string $refUnit): object
+    public function find(string $uuid): object
     {
         return $this->programmatic->vendas->request->get(
-            vsprintf(self::ENDPOINT_FIND_BY_UUID, [$refRealEstateDevelopment, $refUnit])
+            vsprintf(self::ENDPOINT_FIND, [$uuid])
+        )->throw()->object();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function update(string $uuid, array $data): object
+    {
+        return $this->programmatic->vendas->request->patch(
+            vsprintf(self::ENDPOINT_UPDATE, [$uuid]),
+            $data
         )->throw()->object();
     }
 }
