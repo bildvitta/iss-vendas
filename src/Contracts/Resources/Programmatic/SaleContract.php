@@ -17,11 +17,6 @@ interface SaleContract
     /**
      * @const string
      */
-    public const ENDPOINT_INTEGRATIONS = self::ENDPOINT_PREFIX.'/integrations';
-
-    /**
-     * @const string
-     */
     public const ENDPOINT_UPDATE = self::ENDPOINT_PREFIX.'/%s';
 
     /**
