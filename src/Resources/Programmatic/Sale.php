@@ -57,16 +57,6 @@ class Sale implements SaleContract
     }
 
     /**
-     * @param array $query
-     *
-     * @return object
-     */
-    public function integrations(array $query = []): object
-    {
-        return $this->programmatic->vendas->request->get(self::ENDPOINT_INTEGRATIONS, $query)->throw()->object();
-    }
-
-    /**
      * @param  string  $uuid
      * @param array $data
      *
