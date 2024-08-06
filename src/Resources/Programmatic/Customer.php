@@ -6,21 +6,15 @@ use Bildvitta\IssVendas\Contracts\Resources\Programmatic\CustomerContract;
 
 class Customer implements CustomerContract
 {
-    /**
-     * @var Programmatic
-     */
     private Programmatic $programmatic;
 
-    /**
-     * @param Programmatic $vendas
-     */
     public function __construct(Programmatic $vendas)
     {
         $this->programmatic = $vendas;
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function create(string $customer_uuid): object
     {

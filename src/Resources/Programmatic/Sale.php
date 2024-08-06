@@ -7,14 +7,8 @@ use Illuminate\Http\Client\RequestException;
 
 class Sale implements SaleContract
 {
-    /**
-     * @var Programmatic
-     */
     public Programmatic $programmatic;
 
-    /**
-     * @param Programmatic $programmatic
-     */
     public function __construct(Programmatic $programmatic)
     {
         $this->programmatic = $programmatic;
@@ -45,10 +39,6 @@ class Sale implements SaleContract
     }
 
     /**
-     * @param string $uuid
-     *
-     * @return object
-     *
      * @throws RequestException
      */
     public function find(string $uuid): object
@@ -56,12 +46,6 @@ class Sale implements SaleContract
         return $this->programmatic->vendas->request->get(vsprintf(self::ENDPOINT_FIND_BY_UUID, [$uuid]))->throw()->object();
     }
 
-    /**
-     * @param  string  $uuid
-     * @param array $data
-     *
-     * @return object
-     */
     public function update(string $uuid, array $data): object
     {
         return $this->programmatic->vendas->request->patch(vsprintf(self::ENDPOINT_UPDATE, [$uuid]), $data)->throw()->object();

@@ -21,31 +21,17 @@ interface SalePersonalizationContract
      */
     public const ENDPOINT_DELETE = '/programmatic/sales/personalizations/%s';
 
-
     /**
-     * @param array $data
-     *
-     * @return object
-     *
      * @throws RequestException
      */
     public function create(array $data): object;
 
     /**
-     * @param string $uuid
-     * @param array $data
-     *
-     * @return object
-     *
      * @throws RequestException
      */
     public function update(string $uuid, array $data): object;
 
     /**
-     * @param string $uuid
-     *
-     * @return object
-     *
      * @throws RequestException
      */
     public function delete(string $uuid): object;

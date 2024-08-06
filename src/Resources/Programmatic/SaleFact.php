@@ -14,7 +14,7 @@ class SaleFact implements SaleFactContract
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function create(string $sale_uuid, array $data): object
     {

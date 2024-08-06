@@ -14,7 +14,7 @@ class SalePersonalization implements SalePersonalizationContract
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function create(array $data): object
     {
@@ -25,7 +25,7 @@ class SalePersonalization implements SalePersonalizationContract
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function update(string $uuid, array $data): object
     {
@@ -36,7 +36,7 @@ class SalePersonalization implements SalePersonalizationContract
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function delete(string $uuid): object
     {
