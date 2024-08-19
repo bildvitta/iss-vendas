@@ -15,7 +15,7 @@ jobs:
         os: [ubuntu-latest]
         php: [8.3]
         laravel: [11.*]
-        stability: [prefer-lowest, prefer-stable]
+        stability: [prefer-stable]
         include:
           - laravel: 11.*
             testbench: ^9.0
@@ -40,7 +40,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer install --no-interaction --no-progress --no-suggest --prefer-${{ matrix.stability }}
+          composer install --no-interaction --no-progress
 
       - name: Execute tests
         run: vendor/bin/pest
