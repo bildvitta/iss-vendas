@@ -31,6 +31,14 @@ class Sale implements SaleContract
     }
 
     /**
+     * @return SalePeriodicityFact
+     */
+    public function periodicityFacts(): SalePeriodicityFact
+    {
+        return new SalePeriodicityFact($this);
+    }
+
+    /**
      * @return SalePersonalization
      */
     public function personalizations()
