@@ -6,13 +6,25 @@ use Bildvitta\IssVendas\Contracts\Resources\Programmatic\RealEstateDevelopmentCo
 
 class RealEstateDevelopment implements RealEstateDevelopmentContract
 {
+    /**
+     * @var Programmatic
+     */
     private Programmatic $programmatic;
 
+    /**
+     * @param Programmatic $vendas
+     */
     public function __construct(Programmatic $vendas)
     {
         $this->programmatic = $vendas;
     }
 
+    /**
+     * @param  array  $query
+     * @param  array  $body
+     *
+     * @return object
+     */
     public function search(array $query = [], array $body = []): object
     {
         $url = self::ENDPOINT_PREFIX;

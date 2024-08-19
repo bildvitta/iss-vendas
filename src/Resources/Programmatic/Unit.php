@@ -6,15 +6,21 @@ use Bildvitta\IssVendas\Contracts\Resources\Programmatic\UnitContract;
 
 class Unit implements UnitContract
 {
+    /**
+     * @var Programmatic
+     */
     private Programmatic $programmatic;
 
+    /**
+     * @param Programmatic $programmatic
+     */
     public function __construct(Programmatic $programmatic)
     {
         $this->programmatic = $programmatic;
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function find(string $uuid): object
     {
@@ -24,7 +30,7 @@ class Unit implements UnitContract
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function update(string $uuid, array $data): object
     {

@@ -13,6 +13,11 @@ class SaleStep implements SaleStepContract
         $this->sale = $sale;
     }
 
+    /**
+     * @param array $query
+     * @param array $body
+     * @return object
+     */
     public function search(array $query = [], array $body = []): object
     {
         $url = self::ENDPOINT_PREFIX;

@@ -20,5 +20,8 @@ interface IssVendasFactory
      */
     public const DEFAULT_OPTIONS = ['allow_redirects' => false];
 
+    /**
+     * @return Sale
+     */
     public function sale(): Sale;
 }

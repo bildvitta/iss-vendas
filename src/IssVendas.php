@@ -79,11 +79,17 @@ class IssVendas implements IssVendasFactory
         );
     }
 
+    /**
+     * @return Sale
+     */
     public function sale(): Sale
     {
         return new Sale($this);
     }
 
+    /**
+     * @return Programmatic
+     */
     public function programmatic(): Programmatic
     {
         return new Programmatic($this);

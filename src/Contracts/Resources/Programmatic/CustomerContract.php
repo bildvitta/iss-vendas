@@ -12,5 +12,5 @@ interface CustomerContract
     /**
      * @const string
      */
-    public const ENDPOINT_FIND_BY_UUID = self::ENDPOINT_PREFIX.'/%s';
+    public const ENDPOINT_FIND_BY_UUID = self::ENDPOINT_PREFIX . '/%s';
 }
