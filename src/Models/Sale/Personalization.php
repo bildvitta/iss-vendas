@@ -2,6 +2,8 @@
 
 namespace Bildvitta\IssVendas\Models\Sale;
 
+use Bildvitta\IssVendas\Models\Produto\Unit;
+use Bildvitta\IssVendas\Models\Sale;
 use Bildvitta\IssVendas\Traits\UsesVendasDB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

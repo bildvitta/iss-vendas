@@ -2,6 +2,7 @@
 
 namespace Bildvitta\IssVendas\Models\PersonalizationSale;
 
+use Bildvitta\IssVendas\Models\PersonalizationSale\Additives\PersonalizationAdditive;
 use Bildvitta\IssVendas\Models\Produto\Personalization;
 use Bildvitta\IssVendas\Models\Sale;
 use Bildvitta\IssVendas\Traits\UsesVendasDB;
@@ -11,6 +12,69 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * App\Models\PersonalizationSale\PersonalizationSale
+ *
+ * @property int $id
+ * @property string $uuid
+ * @property string $type
+ * @property string $status
+ * @property int $sale_id
+ * @property float $amount
+ * @property bool $incc
+ * @property string|null $attachment
+ * @property string|null $personalization_description
+ * @property int $code
+ * @property bool $integration
+ * @property string|null $legal_document_status
+ * @property string|null $document_uuid
+ * @property int|null $mega_code
+ * @property \Illuminate\Support\Carbon|null $sent_date
+ * @property \Illuminate\Support\Carbon|null $integration_date
+ * @property int $creator_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read User $creator
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\PersonalizationSale\PersonalizationSaleDescription> $descriptions
+ * @property-read int|null $descriptions_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Personalization> $final_personalizations
+ * @property-read int|null $final_personalizations_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\PersonalizationSale\PersonalizationSalePeriodicity> $periodicities
+ * @property-read int|null $periodicities_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Personalization> $personalizations
+ * @property-read int|null $personalizations_count
+ * @property-read Sale $sale
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale onlyTrashed()
+ * @method static Builder|BaseModel pagination()
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale query()
+ * @method static Builder|BaseModel search()
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereAmount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereAttachment($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereCreatorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereDocumentUuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereIncc($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereIntegration($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereIntegrationDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereLegalDocumentStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereMegaCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale wherePersonalizationDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereSaleId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereSentDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale whereUuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|PersonalizationSale withoutTrashed()
+ * @mixin \Eloquent
+ */
 class PersonalizationSale extends Model
 {
     use UsesVendasDB;
@@ -85,10 +149,10 @@ class PersonalizationSale extends Model
         return $this->belongsTo(Sale::class)->withoutGlobalScopes();
     }
 
-    public function creator(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'creator_id', 'id');
-    }
+    // public function creator(): BelongsTo
+    // {
+    //     return $this->belongsTo(User::class, 'creator_id', 'id');
+    // }
 
     public function personalizations(): BelongsToMany
     {

@@ -2,6 +2,8 @@
 
 namespace Bildvitta\IssVendas\Models;
 
+use Bildvitta\IssVendas\Models\PersonalizationSale\Additives\PersonalizationAdditive;
+use Bildvitta\IssVendas\Models\PersonalizationSale\PersonalizationSale;
 use Bildvitta\IssVendas\Models\Produto\Unit;
 use Bildvitta\IssVendas\Models\Sale\Personalization;
 use Bildvitta\IssVendas\Traits\UsesVendasDB;
@@ -62,11 +64,6 @@ class Sale extends Model
         'printed' => 'Impresso',
     ];
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var string[]
-     */
     protected $fillable = [
         'real_estate_development_id',
         'user_hub_seller_id',
@@ -109,11 +106,6 @@ class Sale extends Model
         'generate_signal_payment_at',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
     protected $casts = [
         'special_needs' => 'bool',
         'fgts' => 'float',

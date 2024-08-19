@@ -21,17 +21,7 @@ class Unit extends Model
     }
 
     /**
-     * Create a new factory instance for the model.
-     */
-    protected static function newFactory(): Factory
-    {
-        return UnitFactory::new();
-    }
-
-    /**
      * Type of unity.
-     *
-     * @const string
      */
     public const UNIT_TYPE_LIST = [
         'residential' => 'Residencial',
@@ -40,11 +30,6 @@ class Unit extends Model
         'storage' => 'Armazém',
     ];
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'uuid',
         'name',
@@ -76,63 +61,63 @@ class Unit extends Model
         'deleted_at',
     ];
 
-    public function realEstateDevelopment(): BelongsTo
-    {
-        return $this->belongsTo(RealEstateDevelopment::class);
-    }
+    // public function realEstateDevelopment(): BelongsTo
+    // {
+    //     return $this->belongsTo(RealEstateDevelopment::class);
+    // }
 
     /**
      * Get the typologies for the unit.
      */
-    public function typology()
-    {
-        return $this->belongsTo(Typology::class);
-    }
+    // public function typology()
+    // {
+    //     return $this->belongsTo(Typology::class);
+    // }
 
-    public function accessories()
-    {
-        return $this->belongsToMany(Accessory::class, prefixTableName('real_estate_development_accessory_unit'));
-    }
+    // public function accessories()
+    // {
+    //     return $this->belongsToMany(Accessory::class, prefixTableName('real_estate_development_accessory_unit'));
+    // }
 
     /**
      * Get the accessories for the unit.
      */
-    public function real_estate_developments_accessories()
-    {
-        return $this->typology ? $this->typology->accessories() : collect([]);
-    }
+    // public function real_estate_developments_accessories()
+    // {
+    //     return $this->typology ? $this->typology->accessories() : collect([]);
+    // }
 
-    /**
-     * Get the blueprints for the unit.
-     */
-    public function real_estate_developments_blueprints(): BelongsTo
-    {
-        return $this->belongsTo(Blueprint::class, 'blueprint_id');
-    }
+    // /**
+    //  * Get the blueprints for the unit.
+    //  */
+    // public function real_estate_developments_blueprints(): BelongsTo
+    // {
+    //     return $this->belongsTo(Blueprint::class, 'blueprint_id');
+    // }
 
-    /**
-     * Get the mirrors group for the unit.
-     */
-    public function mirror_group(): BelongsTo
-    {
-        return $this->belongsTo(Mirror::class, 'mirror_id');
-    }
+    // /**
+    //  * Get the mirrors group for the unit.
+    //  */
+    // public function mirror_group(): BelongsTo
+    // {
+    //     return $this->belongsTo(Mirror::class, 'mirror_id');
+    // }
 
-    /**
-     * Get the mirrors subgroups for the unit.
-     */
-    public function mirror_subgroup(): BelongsTo
-    {
-        return $this->belongsTo(MirrorGroup::class, 'mirror_group_id');
-    }
+    // /**
+    //  * Get the mirrors subgroups for the unit.
+    //  */
+    // public function mirror_subgroup(): BelongsTo
+    // {
+    //     return $this->belongsTo(MirrorGroup::class, 'mirror_group_id');
+    // }
 
-    public function getTypologyUuidAttribute(): Typology|string|null
-    {
-        return $this->typology;
-    }
+    // public function getTypologyUuidAttribute(): Typology|string|null
+    // {
+    //     return $this->typology;
+    // }
 
-    public function blueprint()
-    {
-        return $this->belongsTo(Blueprint::class);
-    }
+    // public function blueprint()
+    // {
+    //     return $this->belongsTo(Blueprint::class);
+    // }
 }
