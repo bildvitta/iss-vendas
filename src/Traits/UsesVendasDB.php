@@ -21,6 +21,7 @@ trait UsesVendasDB
         config([
             'database.connections.iss-vendas' => [
                 'driver' => 'mysql',
+                'url' => config('iss-vendas.db.url'),
                 'host' => config('iss-vendas.db.host'),
                 'port' => config('iss-vendas.db.port'),
                 'database' => config('iss-vendas.db.database'),
