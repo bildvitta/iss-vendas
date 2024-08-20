@@ -23,6 +23,7 @@ class Environment extends Model
     {
         parent::__construct($attributes);
         $this->table = config('sp-produto.table_prefix') . 'environments';
+        $this->configDbConnection();
     }
 
     public function personalizations(): BelongsToMany

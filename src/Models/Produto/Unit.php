@@ -18,6 +18,7 @@ class Unit extends Model
     {
         parent::__construct($attributes);
         $this->table = config('sp-produto.table_prefix') . 'units';
+        $this->configDbConnection();
     }
 
     /**

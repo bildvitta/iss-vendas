@@ -50,6 +50,7 @@ class Personalization extends Model
     {
         parent::__construct($attributes);
         $this->table = config('sp-produto.table_prefix') . 'personalizations';
+        $this->configDbConnection();
     }
 
     public function environments(): BelongsToMany
