@@ -2,6 +2,35 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## v0.0.15 - 2024-08-22
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 1.3.4 to 1.3.5 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/34
+* Bump actions/checkout from 3.1.0 to 3.2.0 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/36
+* Bump actions/checkout from 3.2.0 to 3.3.0 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/37
+* Bump dependabot/fetch-metadata from 1.3.5 to 1.3.6 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/38
+* Bump actions/checkout from 3.3.0 to 3.4.0 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/39
+* Bump actions/checkout from 3.4.0 to 3.5.0 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/40
+* Bump actions/checkout from 3.5.0 to 3.5.2 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/41
+* Bump dependabot/fetch-metadata from 1.3.6 to 1.4.0 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/42
+* Bump dependabot/fetch-metadata from 1.4.0 to 1.5.1 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/43
+* Bump actions/checkout from 3.5.2 to 3.5.3 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/44
+* Bump dependabot/fetch-metadata from 1.5.1 to 1.6.0 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/45
+* Bump actions/checkout from 3.5.3 to 3.6.0 by @dependabot in https://github.com/bildvitta/iss-vendas/pull/46
+* Programmatic Sales integration removal by @michaelnakamura in https://github.com/bildvitta/iss-vendas/pull/51
+* Update develop by @leandrohago in https://github.com/bildvitta/iss-vendas/pull/52
+* Merge pull request #52 from bildvitta/main by @leandrohago in https://github.com/bildvitta/iss-vendas/pull/53
+* Criar histórico do pagamento de sinal no vendas by @leandrohago in https://github.com/bildvitta/iss-vendas/pull/54
+* Adicionando models do Vendas para acessar via Banco by @zerossB in https://github.com/bildvitta/iss-vendas/pull/58
+* Merge Develop into Master by @zerossB in https://github.com/bildvitta/iss-vendas/pull/59
+
+### New Contributors
+
+* @leandrohago made their first contribution in https://github.com/bildvitta/iss-vendas/pull/52
+
+**Full Changelog**: https://github.com/bildvitta/iss-vendas/compare/v0.0.14...v0.0.15
+
 ## v0.0.14 - 2022-11-04
 
 Programmatic Unit url fixes
