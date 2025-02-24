@@ -151,4 +151,14 @@ class Sale extends Model
     {
         return $this->personalizations()->count();
     }
+
+    public function periodicities(): HasMany
+    {
+        return $this->hasMany(SalePeriodicity::class, 'sale_id');
+    }
+
+    public function crm_credit_process_simulator(): BelongsTo
+    {
+        return $this->belongsTo(config('iss-vendas.crm_credit_process_simulator_class'), 'crm_credit_process_simulator_id', 'id');
+    }
 }
