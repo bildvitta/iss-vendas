@@ -2,6 +2,18 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## v0.0.16 - 2025-02-24
+
+### What's Changed
+
+* Sale models by @fabiomartins1 in https://github.com/bildvitta/iss-vendas/pull/60
+
+### New Contributors
+
+* @fabiomartins1 made their first contribution in https://github.com/bildvitta/iss-vendas/pull/60
+
+**Full Changelog**: https://github.com/bildvitta/iss-vendas/compare/v0.0.15...v0.0.16
+
 ## v0.0.15 - 2024-08-22
 
 ### What's Changed
