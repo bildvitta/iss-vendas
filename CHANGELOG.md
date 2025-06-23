@@ -2,6 +2,14 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## v0.0.17 - 2025-06-23
+
+### What's Changed
+
+* Added customer model by @fabiomartins1 in https://github.com/bildvitta/iss-vendas/pull/63
+
+**Full Changelog**: https://github.com/bildvitta/iss-vendas/compare/v0.0.16...v0.0.17
+
 ## v0.0.16 - 2025-02-24
 
 ### What's Changed
