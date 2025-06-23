@@ -2,6 +2,7 @@
 
 namespace Bildvitta\IssVendas\Models;
 
+use Bildvitta\IssVendas\Models\Crm\Customer;
 use Bildvitta\IssVendas\Models\PersonalizationSale\Additives\PersonalizationAdditive;
 use Bildvitta\IssVendas\Models\PersonalizationSale\PersonalizationSale;
 use Bildvitta\IssVendas\Models\Produto\Unit;
@@ -150,5 +151,10 @@ class Sale extends Model
     public function has_personalization(): int
     {
         return $this->personalizations()->count();
+    }
+
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(Customer::class, 'crm_customer_id', 'id')->withTrashed();
     }
 }
