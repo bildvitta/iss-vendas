@@ -2,6 +2,7 @@
 
 namespace Bildvitta\IssVendas\Models;
 
+use Bildvitta\IssVendas\Models\Crm\Customer;
 use Bildvitta\IssVendas\Models\PersonalizationSale\Additives\PersonalizationAdditive;
 use Bildvitta\IssVendas\Models\PersonalizationSale\PersonalizationSale;
 use Bildvitta\IssVendas\Models\Produto\Unit;
@@ -160,5 +161,10 @@ class Sale extends Model
     public function crm_credit_process_simulator(): BelongsTo
     {
         return $this->belongsTo(config('iss-vendas.crm_credit_process_simulator_class'), 'crm_credit_process_simulator_id', 'id');
+    }
+
+    public function customer(): BelongsTo
+    {
+        return $this->belongsTo(Customer::class, 'crm_customer_id', 'id')->withTrashed();
     }
 }
