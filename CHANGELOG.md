@@ -2,6 +2,10 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## v0.0.18 - 2025-09-18
+
+**Full Changelog**: https://github.com/bildvitta/iss-vendas/compare/v0.0.17...v0.0.18
+
 ## v0.0.17 - 2025-06-23
 
 ### What's Changed
