@@ -2,6 +2,17 @@
 
 All notable changes to `iss-vendas` will be documented in this file.
 
+## v0.0.19 - 2026-04-27
+
+### What's Changed
+
+* Bump actions/checkout from 4 to 6 by @dependabot[bot] in https://github.com/bildvitta/iss-vendas/pull/66
+* Update develop by @leandrohago in https://github.com/bildvitta/iss-vendas/pull/67
+* Feature/add sale step by @leandrohago in https://github.com/bildvitta/iss-vendas/pull/68
+* v0.0.19 by @leandrohago in https://github.com/bildvitta/iss-vendas/pull/69
+
+**Full Changelog**: https://github.com/bildvitta/iss-vendas/compare/v0.0.18...v0.0.19
+
 ## v0.0.18 - 2025-09-18
 
 **Full Changelog**: https://github.com/bildvitta/iss-vendas/compare/v0.0.17...v0.0.18
