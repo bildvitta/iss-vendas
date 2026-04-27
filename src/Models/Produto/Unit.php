@@ -2,9 +2,11 @@
 
 namespace Bildvitta\IssVendas\Models\Produto;
 
+use Bildvitta\IssVendas\Models\SaleStep;
 use Bildvitta\IssVendas\Traits\UsesVendasDB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Unit extends Model
@@ -121,4 +123,9 @@ class Unit extends Model
     // {
     //     return $this->belongsTo(Blueprint::class);
     // }
+
+    public function sale_step(): HasOne
+    {
+        return $this->hasOne(SaleStep::class, 'id', 'sale_step_id');
+    }
 }
